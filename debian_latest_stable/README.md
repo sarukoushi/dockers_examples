@@ -1,5 +1,7 @@
 # Debian latest (trixie)
 
+## Do steps below inside the directory which contains specific with ```Dockerfile```
+
 ### Build:
 ```bash
 docker compose build
@@ -14,11 +16,11 @@ xhost -local:docker
 ```
 ### Start:
 ```bash
-docker compose up -d spot-deb-main
+docker compose up -d deb-main
 ```
 ### Attach to container:
 ```bash
-docker compose attach spot-deb-main
+docker compose attach deb-main
 ```
 ### Tips:
   * To detach from the container, and let it run in the backgroud, use the following shortcut sequence inside of it: ``` CTRL+p CTRL+q ```.

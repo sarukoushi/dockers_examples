@@ -1,5 +1,7 @@
 # Debian latest (trixie) with ssh mount.
 
+## Do steps below inside the directory which contains specific with ```Dockerfile```
+
 ### Add identity to the authentication agent, so the ssh-mount works.
 ```bash
 ssh-add <path_to_your_ssh_key_file>
@@ -23,11 +25,11 @@ xhost -local:docker
 ```
 ### Start:
 ```bash
-docker compose up -d spot-deb-main
+docker compose up -d deb-main-ssh-mount-service
 ```
 ### Attach to container:
 ```bash
-docker compose attach spot-deb-main
+docker compose attach deb-main-ssh-mount-service
 ```
 ### Tips:
   * To detach from the container, and let it run in the backgroud, use the following shortcut sequence inside of it: ``` CTRL+p CTRL+q ```.
