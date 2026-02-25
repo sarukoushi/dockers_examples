@@ -1,0 +1,32 @@
+services:
+  deb-main:
+    image: deb-main-image:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: deb-main-cont
+    network_mode: "host"
+    environment:
+      DISPLAY: ${DISPLAY}
+      # DISPLAY: ":0"
+      QT_X11_NO_MITSHM: 1
+      XAUTHORITY: ${XAUTHORITY}
+    devices:
+      - "/dev/dri:/dev/dri"
+      - "/dev/snd"
+    group_add:
+      - video
+      - dialout
+      - sudo
+      - tty
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${XAUTHORITY}:${XAUTHORITY}
+      # - $HOME/.Xauthority:/root/.Xauthority:rw
+    stdin_open: true
+    tty: true
+    privileged: true
+# volumes:
+  # deb-main-vol:
