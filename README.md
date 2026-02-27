@@ -1,4 +1,4 @@
-# ${\color{#ffcc00} \text{Bucket for docker examples}}$
+# ${\color{#ffcc00} \text{Bucket for docker (compose) examples}}$
 
 ### ${\color{#ffcc00} \text{What is here:}}$
   *  include debian latest (trixie) stable
