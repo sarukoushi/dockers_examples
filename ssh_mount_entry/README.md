@@ -2,6 +2,7 @@
   * Adds user: (nyx) with password: (qwerty)
   * Uses ssh mount to git clone private, ssh-key protected repository, by letting the builder connect to ssh agent.
   * Optional personalized bash aliases.
+
 <span><b>--> Let me know if something could be improved! <--</b></span>
 <details open>
 
